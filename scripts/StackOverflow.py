@@ -52,3 +52,8 @@ query = "redos AND regex"
 items = search_questions(query)
 append_to_json(items, 'SO_redos_regex.json')
 print("# of questions or answers in SO that contains redos and regex =", len(items))
+
+query2 = "evil AND regex"
+items2 = search_questions(query2)
+append_to_json(items2, 'SO_evil_regex.json')
+print("# of questions or answers in SO that contains evil and regex =", len(items2))
