@@ -19,7 +19,6 @@ queries = []
 
 # single request exceed 1000 results(Github API limit), separate into different time range
 date_ranges = [
-    ('2023-05-01', '2023-09-23'),
     ('2023-01-01', '2023-05-01'),
     ('2022-09-01', '2023-01-01'),
     ('2022-05-01', '2022-09-01'),
@@ -29,8 +28,7 @@ date_ranges = [
     ('2021-01-01', '2021-05-01'),
     ('2020-09-01', '2021-01-01'),
     ('2020-05-01', '2020-09-01'),
-    ('2020-01-01', '2020-05-01'),
-    ('2019-09-01', '2020-01-01')
+    ('2020-01-01', '2020-05-01')
 ]
 
 query_0 = 'regex AND evil is:closed is:pr -author:app/dependabot -author:app/dependabot-preview -author:app/renovate -author:app/greenkeeper -author:greenkeeperio-bot created:>2023-05-01'
