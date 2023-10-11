@@ -33,7 +33,7 @@ def process(source, parsed_data, pk=0):
         
         
 
-    with open(f'/Users/joanna/Documents/Portfolio/GitHub/S2E-Lab/coding_website/fixtures/{source}_fixtures.json', 'w') as outfile:
+    with open(f'~/Documents/Portfolio/GitHub/S2E-Lab/coding_website/fixtures/{source}_fixtures.json', 'w') as outfile:
         # save to json but formatted with tabs
         json.dump(fixtures, outfile, indent=4)
 
