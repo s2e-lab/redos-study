@@ -3,14 +3,15 @@ import json
 import openai
 
 
-
 # %%
 with open("./config.json") as f:
     config_data = json.loads(f.read())
 
 OPENAI_KEY = config_data['OPENAI_KEY']
+openai.organization = "org-YScTfW4MjFv6Ue9wMOaKcFOs"
 openai.api_key = OPENAI_KEY
 print(OPENAI_KEY)
+print(openai.organization)
 
 
 # %%
@@ -29,7 +30,6 @@ def openai_response(prompt):
     print(response)
     prompt['text_davinci_003_output'] = response
     return prompt
-    
 
 
 # %%
@@ -49,5 +49,3 @@ for item in data:
 # %%
 with open("./Text_DaVinci_Output.json", "w") as f:
     json.dump(new_data, f, indent=4)
-
-
