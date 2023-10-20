@@ -7,13 +7,16 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 torch.set_default_device('cuda')
 
-model = AutoModelForCausalLM.from_pretrained("microsoft/phi-1_5", trust_remote_code=True, torch_dtype="auto")
-tokenizer = AutoTokenizer.from_pretrained("microsoft/phi-1_5", trust_remote_code=True, torch_dtype="auto")
+model = AutoModelForCausalLM.from_pretrained(
+    "microsoft/phi-1_5", trust_remote_code=True, torch_dtype="auto")
+tokenizer = AutoTokenizer.from_pretrained(
+    "microsoft/phi-1_5", trust_remote_code=True, torch_dtype="auto")
 
 
 # %%
-def phi_response(prompt, tokenizer,model):
-    prompt_text = prompt["refined_prompt"]+ "Generate a RegEx for this description. \nAnswer:"
+def phi_response(prompt, tokenizer, model):
+    prompt_text = prompt["refined_prompt"] + \
+        "Generate a RegEx for this description. \nAnswer:"
     inputs = tokenizer(prompt_text, return_tensors="pt")
     x = inputs['input_ids']
     x = x.expand(10, -1)
@@ -23,11 +26,12 @@ def phi_response(prompt, tokenizer,model):
         max_length=128,
         do_sample=True,
     )
-    prompt["phi_output"] =[]
+    prompt["phi_output"] = []
     for i in range(10):
         prompt["phi_output"].append({})
         output = generated_token[i].cpu().squeeze()
-        prompt["phi_output"][i]["text"] = tokenizer.decode(output).split(prompt_text)[-1].split("\n\n")[0]
+        prompt["phi_output"][i]["text"] = tokenizer.decode(
+            output).split(prompt_text)[-1].split("\n\n")[0]
 
     return prompt
 
@@ -42,7 +46,7 @@ len(data)
 new_data = []
 for item in tqdm.tqdm(data):
 
-    item = phi_response(item, tokenizer,model)
+    item = phi_response(item, tokenizer, model)
     print(item)
     new_data.append(item)
 
@@ -50,5 +54,3 @@ for item in tqdm.tqdm(data):
 # %%
 with open('./Phi_Refined_Output_Original.json', 'w') as f:
     json.dump(new_data, f, indent=4)
-
-
