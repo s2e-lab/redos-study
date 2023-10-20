@@ -8,17 +8,15 @@ with open("./config.json") as f:
     config_data = json.loads(f.read())
 
 OPENAI_KEY = config_data['OPENAI_KEY']
+# openai.organization = "org-YScTfW4MjFv6Ue9wMOaKcFOs"
 openai.api_key = OPENAI_KEY
 print(OPENAI_KEY)
 
-    
 
-
-# %%
-def gpt35_response(prompt):
+def gpt4_response(prompt):
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4",
             messages=[
                 {
                     "role": "user",
@@ -33,18 +31,17 @@ def gpt35_response(prompt):
             presence_penalty=0,
             n=10,
         )
-        prompt['gpt3.5_output'] = response
+        prompt['gpt4_output'] = response
         print(response)
         return prompt
     except Exception as e:
         print(e)
-        prompt['gpt3.5_output'] = e
+        prompt['gpt4_output'] = e
         return prompt
 
 
-
 # %%
-with open('./DatasetCollection/RegexEval.json') as f:
+with open('../../data/RegexEval.json') as f:
     data = json.loads(f.read())
 
 len(data)
@@ -52,11 +49,11 @@ len(data)
 # %%
 new_data = []
 for item in data:
-    item = gpt35_response(item)
+    item = gpt4_response(item)
     new_data.append(item)
     break
 
 
 # %%
-with open('./GPT3.5_Refined_Output.json', "w") as f:
-   json.dump(new_data, f, indent=4)
+with open('./GPT4_Refined_Output.json', "w") as f:
+    json.dump(new_data, f, indent=4)

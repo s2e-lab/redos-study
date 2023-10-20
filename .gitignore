@@ -162,3 +162,6 @@ cython_debug/
 # ignore test files
 /scripts/test_jiahao.py
 /scripts/test_jiahao2.py
+
+# ignore OpenAI api key
+/scripts/Generation/config.json
