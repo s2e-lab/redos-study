@@ -4,6 +4,8 @@ from tqdm import tqdm
 from tenacity import (retry, stop_after_attempt,
                       wait_random_exponential, )  # for exponential backoff
 
+import time
+
 with open("./config.json") as f:
     config_data = json.load(f)
 
@@ -36,10 +38,12 @@ def gpt35_response(prompt, style, temperature, token_limit):
             n=10
         )
         prompt['output'] = response
+        time.sleep(10)
         return prompt
     except Exception as e:
         print(e)
         prompt['output'] = str(e)
+        time.sleep(30)
         return prompt
 
 
