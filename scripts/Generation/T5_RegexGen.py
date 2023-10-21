@@ -1,39 +1,37 @@
-# %%
 import json
 import tqdm
-
-# %%
-# Use a pipeline as a high-level helper
 from transformers import pipeline
 
-pipe = pipeline("text2text-generation", model="rymaju/KB13-t5-base-finetuned-en-to-regex", device_map="auto")
+pipe = pipeline("text2text-generation",
+                model="rymaju/KB13-t5-base-finetuned-en-to-regex", device_map="auto")
 
-# %%
-def t5_response(prompt):
-    response = pipe(prompt["refined_prompt"], num_return_sequences = 10, early_stopping=True, do_sample = True,
-      temperature=0.8, max_length=128 )
-    
+prompt_styles = ['raw', 'refined']
+temperatures = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+token_size_limits = [64, 128, 256, 512]
+
+
+def t5_response(prompt, style, temperature, token_limit):
+    prompt_content = prompt["raw_prompt"] if style == 'raw' else prompt["refined_prompt"]
+    response = pipe(prompt_content, num_return_sequences=10, early_stopping=True, do_sample=True,
+                    temperature=temperature, max_length=token_limit)
     prompt['t5_output'] = response
     return prompt
 
 
+with open('.RegexEval.json') as f:
+    data = json.load(f)
 
-# %%
-with open('../DatasetCollection/RegexEval.json') as f:
-    data = json.loads(f.read())
+for style in prompt_styles:
+    for temp in temperatures:
+        for token_limit in token_size_limits:
+            new_data = []
+            print(
+                f'Processing {style} prompts with temperature {temp} and token limit {token_limit}')
+            for item in tqdm.tqdm(data[:10]):
+                updated_item = t5_response(item, style, temp, token_limit)
+                new_data.append(updated_item)
 
-len(data)
-
-# %%
-new_data = []
-for item in tqdm.tqdm(data):
-
-    item = t5_response(item)
-    new_data.append(item)
-
-
-# %%
-with open('./T5_Refined_Output.json', 'w') as f:
-    json.dump(new_data, f, indent=4)
-
-
+            filename = f'./Output/t5/T5_Output_{style}_{temp}_{token_limit}.json'
+            with open(filename, "w") as f:
+                json.dump(new_data, f, indent=4)
+                print(f'Saved to {filename}')

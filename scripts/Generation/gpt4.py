@@ -8,6 +8,7 @@ with open("./config.json") as f:
     config_data = json.load(f)
 
 OPENAI_KEY = config_data['OPENAI_KEY']
+openai.organization = config_data['OPENAI_ORG']
 openai.api_key = OPENAI_KEY
 
 prompt_styles = ['raw', 'refined']
