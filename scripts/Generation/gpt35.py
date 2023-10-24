@@ -1,8 +1,8 @@
 import json
 import openai
 from tqdm import tqdm
-from tenacity import (retry, stop_after_attempt,
-                      wait_random_exponential, )  # for exponential backoff
+# from tenacity import (retry, stop_after_attempt,
+#                       wait_random_exponential, )  # for exponential backoff
 
 import time
 
@@ -18,7 +18,7 @@ temperatures = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
 token_size_limits = [64, 128, 256, 512]
 
 
-@retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))
+# @retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))
 def gpt35_response(prompt, style, temperature, token_limit):
     try:
         # Decide on the prompt style
