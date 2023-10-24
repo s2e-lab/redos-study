@@ -7,18 +7,20 @@ pipe = pipeline("text2text-generation",
 
 prompt_styles = ['raw', 'refined']
 temperatures = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
-token_size_limits = [64, 128, 256, 512]
+token_size_limits = [128]
 
 
 def t5_response(prompt, style, temperature, token_limit):
+    if temperature == 0.0:
+        temperature = 1e-5
     prompt_content = prompt["raw_prompt"] if style == 'raw' else prompt["refined_prompt"]
     response = pipe(prompt_content, num_return_sequences=10, early_stopping=True, do_sample=True,
                     temperature=temperature, max_length=token_limit)
-    prompt['t5_output'] = response
+    prompt['output'] = response
     return prompt
 
 
-with open('.RegexEval.json') as f:
+with open('./RegexEval.json') as f:
     data = json.load(f)
 
 for style in prompt_styles:
