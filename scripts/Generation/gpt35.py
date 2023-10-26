@@ -10,12 +10,13 @@ with open("./config.json") as f:
     config_data = json.load(f)
 
 OPENAI_KEY = config_data['OPENAI_KEY']
-openai.organization = config_data['OPENAI_ORG']
+# openai.organization = config_data['OPENAI_ORG']
 openai.api_key = OPENAI_KEY
 
 prompt_styles = ['raw', 'refined']
-temperatures = [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
-token_size_limits = [64, 128, 256, 512]
+# temperatures = [0.0, 0.2, 0.4, 0.6]
+temperatures = [ 1.0]
+token_size_limits = [128]
 
 
 # @retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))
@@ -57,7 +58,7 @@ for style in prompt_styles:
             new_data = []
             print(
                 f'Processing {style} prompts with temperature {temp} and token limit {token_limit}')
-            for item in tqdm(data[:10]):
+            for item in tqdm(data):
                 updated_item = gpt35_response(item, style, temp, token_limit)
                 new_data.append(updated_item)
 
