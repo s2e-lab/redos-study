@@ -94778,7 +94778,99 @@
             "4r89u34"
         ],
         "id": 3803,
-        "output": "Request timed out: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)"
+        "output": {
+            "id": "chatcmpl-8Dzs1uTQPxXd9b9MSbNB87ojQ87Yi",
+            "object": "chat.completion",
+            "created": 1698346785,
+            "model": "gpt-3.5-turbo-0613",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{4}[NS]\\d{5}[EW]\\d{3}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 1,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{4}[NS]\\d{5}[EW]\\d{3}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 2,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{4}[NS]\\d{5}[EW]\\d{3}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 3,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{4}[NS]\\d{5}[EW]\\d{3}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 4,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{4}[NS]\\d{5}[EW]\\d{3}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 5,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{4}[NS]\\d{5}[EW]\\d{3}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 6,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{4}[NS]\\d{5}[EW]\\d{3}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 7,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{4}[NS]\\d{5}[EW]\\d{3}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 8,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{4}[NS]\\d{4}[EW]\\d{3}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 9,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{4}[NS]\\d{5}[EW]\\d{3}$"
+                    },
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "prompt_tokens": 82,
+                "completion_tokens": 170,
+                "total_tokens": 252
+            }
+        }
     },
     {
         "expression": "(((\\d{2}((0[13578]|1[02])(0[1-9]|[12]\\d|3[01])|(0[13456789]|1[012])(0[1-9]|[12]\\d|30)|02(0[1-9]|1\\d|2[0-8])))|([02468][048]|[13579][26])0229))(( |-)(\\d{4})( |-)([01]8((( |-)\\d{1})|\\d{1}))|(\\d{4}[01]8\\d{1}))",
