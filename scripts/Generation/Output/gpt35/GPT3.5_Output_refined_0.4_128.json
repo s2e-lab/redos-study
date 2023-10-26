@@ -3487,7 +3487,99 @@
             "3yb43yb5"
         ],
         "id": 48,
-        "output": "Request timed out: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)"
+        "output": {
+            "id": "chatcmpl-8DzD84UfmOSB4dUcLhUuYsL2KgpVm",
+            "object": "chat.completion",
+            "created": 1698344250,
+            "model": "gpt-3.5-turbo-0613",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(\\d+(\\.\\d*)?|\\.\\d+)?$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 1,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(\\d+(\\.\\d*)?|\\.\\d+)?$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 2,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(?:\\d+(?:\\.\\d*)?|\\.\\d+)?$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 3,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(\\d+(\\.\\d+)?|\\.\\d+)?$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 4,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(\\d+(\\.\\d+)?|\\.\\d+)?$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 5,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d*\\.?\\d*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 6,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(\\d+(\\.\\d+)?|\\.\\d+)?$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 7,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(\\d+(\\.\\d*)?|\\.\\d+)?$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 8,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(\\d+(\\.\\d+)?|\\.\\d*)?$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 9,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(?:\\d+(?:\\.\\d*)?|\\.\\d+)?$"
+                    },
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "prompt_tokens": 63,
+                "completion_tokens": 130,
+                "total_tokens": 193
+            }
+        }
     },
     {
         "expression": "^([0-9]( |-)?)?(\\(?[0-9]{3}\\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$",
@@ -5481,7 +5573,99 @@
             "486/465123"
         ],
         "id": 95,
-        "output": "Request timed out: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)"
+        "output": {
+            "id": "chatcmpl-8DzDJ3DnedsPg4nsirhBJefnsazZD",
+            "object": "chat.completion",
+            "created": 1698344261,
+            "model": "gpt-3.5-turbo-0613",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{1,2}/\\d{2,4}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 1,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{1,2}/\\d{2,4}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 2,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{1,2}/\\d{2,4}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 3,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{1,2}/\\d{2,4}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 4,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{1,2}/\\d{2,4}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 5,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{1,2}/\\d{2,4}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 6,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{1,2}/\\d{2,4}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 7,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{1,2}/\\d{2,4}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 8,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{1,2}/\\d{2,4}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 9,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{1,2}/\\d{2,4}$"
+                    },
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "prompt_tokens": 74,
+                "completion_tokens": 140,
+                "total_tokens": 214
+            }
+        }
     },
     {
         "expression": "^(|(0[1-9])|(1[0-2]))\\/((0[1-9])|(1\\d)|(2\\d)|(3[0-1]))\\/((\\d{4}))$",
@@ -79249,7 +79433,99 @@
             "fooo.Bar"
         ],
         "id": 2439,
-        "output": "Request timed out: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)"
+        "output": {
+            "id": "chatcmpl-8DzDUm0WQ0BHafLWMI1yAA1lHV6fP",
+            "object": "chat.completion",
+            "created": 1698344272,
+            "model": "gpt-3.5-turbo-0613",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^[a-zA-Z_][a-zA-Z0-9_]*(\\.[a-zA-Z_][a-zA-Z0-9_]*)*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 1,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^([a-zA-Z_$][a-zA-Z_$0-9]*\\.)*[a-zA-Z_$][a-zA-Z_$0-9]*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 2,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^[a-zA-Z]+\\.[a-zA-Z_]+\\.[a-zA-Z_$]+\\.[a-zA-Z]+$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 3,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^[a-zA-Z]+\\.[a-zA-Z0-9_]+\\.[a-zA-Z0-9_]+\\.[a-zA-Z0-9_]+$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 4,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^[a-zA-Z]+\\.[a-zA-Z_]+\\.[a-zA-Z0-9\\$_]+$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 5,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^[a-zA-Z_][a-zA-Z0-9_]*(\\.[a-zA-Z_][a-zA-Z0-9_]*)*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 6,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^[a-zA-Z]+\\.[a-zA-Z_]+\\.[a-zA-Z_]+\\.[a-zA-Z_]+[a-zA-Z0-9_$]*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 7,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(\\w+\\.)+\\w+\\.\\w+$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 8,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^[a-zA-Z]+\\.[a-zA-Z_]+\\.[a-zA-Z_]+\\$?[a-zA-Z_]*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 9,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^[a-zA-Z]+(\\.[a-zA-Z_]+)+$"
+                    },
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "prompt_tokens": 57,
+                "completion_tokens": 250,
+                "total_tokens": 307
+            }
+        }
     },
     {
         "expression": "^(1(0|7|9)2?)\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$",

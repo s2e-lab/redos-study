@@ -3103,7 +3103,99 @@
             "j2v"
         ],
         "id": 45,
-        "output": "Request timed out: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)"
+        "output": {
+            "id": "chatcmpl-8DzGEtiZyVeNSKcs2JdQE2tDF4aPJ",
+            "object": "chat.completion",
+            "created": 1698344442,
+            "model": "gpt-3.5-turbo-0613",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^[a-zA-Z0-9]{4,8}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 1,
+                    "message": {
+                        "role": "assistant",
+                        "content": "/^.{4,8}$/"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 2,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\w{4,8}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 3,
+                    "message": {
+                        "role": "assistant",
+                        "content": "/^.{4,8}$/"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 4,
+                    "message": {
+                        "role": "assistant",
+                        "content": "/^.{4,8}$/"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 5,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^[A-Za-z0-9]{4,8}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 6,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^[a-zA-Z0-9]{4,8}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 7,
+                    "message": {
+                        "role": "assistant",
+                        "content": "```regex\n.{4,8}\n```"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 8,
+                    "message": {
+                        "role": "assistant",
+                        "content": "/^.{4,8}$/"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 9,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^.{4,8}$"
+                    },
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "prompt_tokens": 43,
+                "completion_tokens": 82,
+                "total_tokens": 125
+            }
+        }
     },
     {
         "expression": "^\\d*$",
@@ -61116,7 +61208,99 @@
             "2000"
         ],
         "id": 1820,
-        "output": "Bad gateway. {\"error\":{\"code\":502,\"message\":\"Bad gateway.\",\"param\":null,\"type\":\"cf_bad_gateway\"}} 502 {'error': {'code': 502, 'message': 'Bad gateway.', 'param': None, 'type': 'cf_bad_gateway'}} {'Date': 'Wed, 25 Oct 2023 02:48:44 GMT', 'Content-Type': 'application/json', 'Content-Length': '84', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'Referrer-Policy': 'same-origin', 'Cache-Control': 'private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0', 'Expires': 'Thu, 01 Jan 1970 00:00:01 GMT', 'Server': 'cloudflare', 'CF-RAY': '81b715ca69a168d0-IND', 'alt-svc': 'h3=\":443\"; ma=86400'}"
+        "output": {
+            "id": "chatcmpl-8DzGPUC7e0YFEDh2qWUjSou9nhbGB",
+            "object": "chat.completion",
+            "created": 1698344453,
+            "model": "gpt-3.5-turbo-0613",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^((0[1-9]|1[0-2])-(0[1-9]|1\\d|2[0-9]|3[01])-(20(00|0[0-8])))$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 1,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0[1-9]|1[0-2])-([0-2][0-9]|3[0-1])-(200[0-8])$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 2,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0[1-9]|1[0-2])-(0[1-9]|1\\d|2\\d|3[01])-(20(0[0-8]))$\nExplanation:\n- ^( )$ : Matches the entire string.\n- (0[1-9]|1[0-2]) : Matches the month from 01 to 12.\n- - : Matches the dash between month and day.\n- (0[1-9]|1\\d|2\\d|3[01]) : Matches the day from 01 to 31.\n- - : Matches the dash between day and year.\n"
+                    },
+                    "finish_reason": "length"
+                },
+                {
+                    "index": 3,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0[1-9]|1[0-2])-([0-2][1-9]|3[0-1])-20(0[0-8])$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 4,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-(200[0-8])$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 5,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0[1-9]|1[0-2])-(0[1-9]|1[0-9]|2[0-8])-(20(0[0-8]))$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 6,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-(20(0[0-8]))$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 7,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0[1-9]|1[0-2])-(0[1-9]|1\\d|2\\d|3[01])-(200[0-8])$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 8,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0[1-9]|1[0-2])-(0[1-9]|1[0-9]|2[0-8])-20(0[0-8])$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 9,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])-(20(0[0-8]))$"
+                    },
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "prompt_tokens": 52,
+                "completion_tokens": 490,
+                "total_tokens": 542
+            }
+        }
     },
     {
         "expression": "^(http\\:\\/\\/(?:www\\.)?[a-zA-Z0-9]+(?:(?:\\-|_)[a-zA-Z0-9]+)*(?:\\.[a-zA-Z0-9]+(?:(?:\\-|_)[a-zA-Z0-9]+)*)*\\.[a-zA-Z]{2,7}(?:\\/)?)$",
@@ -65479,7 +65663,99 @@
             "+"
         ],
         "id": 1925,
-        "output": "Request timed out: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)"
+        "output": {
+            "id": "chatcmpl-8DzGcdY10H06kUfhaUCovDhtuUjiD",
+            "object": "chat.completion",
+            "created": 1698344466,
+            "model": "gpt-3.5-turbo-0613",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\*.*|\\*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 1,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(?:\\*|\\*\\w*)$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 2,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^[\\*]*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 3,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(\\\\*)+$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 4,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(\\*|\\*\\(.+\\))$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 5,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\*.*|$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 6,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\*|\\*\\*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 7,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\*.*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 8,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(\\*|\\*)$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 9,
+                    "message": {
+                        "role": "assistant",
+                        "content": "/^\\*.*$|^(\\*)$/"
+                    },
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "prompt_tokens": 41,
+                "completion_tokens": 60,
+                "total_tokens": 101
+            }
+        }
     },
     {
         "expression": "^[0-9]+\\.?[0-9]?[0-9]?[0,5]?$",
@@ -71878,7 +72154,99 @@
             "234:433"
         ],
         "id": 2161,
-        "output": "Bad gateway. {\"error\":{\"code\":502,\"message\":\"Bad gateway.\",\"param\":null,\"type\":\"cf_bad_gateway\"}} 502 {'error': {'code': 502, 'message': 'Bad gateway.', 'param': None, 'type': 'cf_bad_gateway'}} {'Date': 'Wed, 25 Oct 2023 03:27:15 GMT', 'Content-Type': 'application/json', 'Content-Length': '84', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'Referrer-Policy': 'same-origin', 'Cache-Control': 'private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0', 'Expires': 'Thu, 01 Jan 1970 00:00:01 GMT', 'Server': 'cloudflare', 'CF-RAY': '81b74e32ee8168cf-IND', 'alt-svc': 'h3=\":443\"; ma=86400'}"
+        "output": {
+            "id": "chatcmpl-8DzGm1PM008mF2VyMD8YpEuQ2WdsU",
+            "object": "chat.completion",
+            "created": 1698344476,
+            "model": "gpt-3.5-turbo-0613",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^([01]\\d|2[0-3]):[0-5]\\d$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 1,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^([0-1][0-9]|[2][0-3]):[0-5][0-9]$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 2,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 3,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^([01]\\d|2[0-3]):([0-5]\\d)$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 4,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{2}:\\d{2}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 5,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 6,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 7,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{2}:\\d{2}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 8,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 9,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^\\d{2}:\\d{2}$"
+                    },
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "prompt_tokens": 32,
+                "completion_tokens": 205,
+                "total_tokens": 237
+            }
+        }
     },
     {
         "expression": "^(\\d)?(\\d|,)*\\.?\\d{1,2}$",
@@ -83532,7 +83900,99 @@
             "'''we'f'ef"
         ],
         "id": 2591,
-        "output": "Bad gateway. {\"error\":{\"code\":502,\"message\":\"Bad gateway.\",\"param\":null,\"type\":\"cf_bad_gateway\"}} 502 {'error': {'code': 502, 'message': 'Bad gateway.', 'param': None, 'type': 'cf_bad_gateway'}} {'Date': 'Wed, 25 Oct 2023 03:56:42 GMT', 'Content-Type': 'application/json', 'Content-Length': '84', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'Referrer-Policy': 'same-origin', 'Cache-Control': 'private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0', 'Expires': 'Thu, 01 Jan 1970 00:00:01 GMT', 'Server': 'cloudflare', 'CF-RAY': '81b779599b4168cf-IND', 'alt-svc': 'h3=\":443\"; ma=86400'}"
+        "output": {
+            "id": "chatcmpl-8DzGxaYXrVW6HltviV3zuSJG9mFNw",
+            "object": "chat.completion",
+            "created": 1698344487,
+            "model": "gpt-3.5-turbo-0613",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^((\\+|00)39)?3(30|31|32|33|34|35|36|37|38|39|40|43|46|48|50|53|56|58|80|83|88|89|90|91|92|93|94|95|96|97|98|99|0|3)\\d{7}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 1,
+                    "message": {
+                        "role": "assistant",
+                        "content": "Here is a regular expression that matches Italian mobile phone numbers based on the given description:\n\n^(?:3[01323]\\d{8}|3[46-9]\\d{8}|33[0138]\\d{8}|3[89]\\d{8}|313\\d{6}|37[037]\\d{8})$\n\nExplanation:\n- ^ - Start of the string\n- (?:\n  - 3[01323]\\d{8} - Matches Tim numbers starting with 3 followed by 0, 1, 2, or 3, followed by any 8 digits\n  - | -"
+                    },
+                    "finish_reason": "length"
+                },
+                {
+                    "index": 2,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(33[0-9]|34[02-9]|3[23689][0-9]|39[0-3]|31[3]|37[0377])[0-9]{7}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 3,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(330|331|333|334|335|336|337|338|339|360|363|366|368|340|342|345|346|347|348|349|320|323|327|328|329|380|383|388|389|390|391|392|393|313|370|373|377)\\d{7}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 4,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^((33[0-9]|36[0368]|3[34])[0-9]{7}|340[0-9]{6}|34[25-9][0-9]{6}|32[039][0-9]{6}|38[089][0-9]{6}|39[0123][0-9]{6}|313[0-9]{6}|37[037][0-9]{6})$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 5,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(3(?:9[0-3]|(?:1(?:3[3-8]|(?:6(?:[0368]|33)|7[01389])|8[89])|6[0368]|(?:3(?:[459]|[0135-8][0-9]|2[013467]|6[03-9])|8[03-8]|?:9(?:[013-9]|2[013467]))))))$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 6,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(?:330|331|333|334|335|336|337|338|339|360|363|366|368|340|342|345|346|347|348|349|320|323|327|328|329|380|383|388|389|390|391|392|393|313|370|373|377)\\d{7}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 7,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(330|331|333|334|335|336|337|338|339|360|363|366|368|340|342|345|346|347|348|349|320|323|327|328|329|380|383|388|389|390|391|392|393|313|370|373|377)\\d{7}$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 8,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(3(?:[9][01-3]))?|^(?:3(?:8(?:[034-9]|89)))|^(?:3(?:3(?:[0134789]|46|6[0368]|360|363|366|368))))?|^(?:3(?:4(?:[02346-9]|5(?:[034689]|07))))?|^(?:3(?:[13]13))|^(?:3(?:7(?:[0379]|73|7[07])))?$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 9,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(?:3(?:13|[9][0-3])|[3-9][3-4][0-9]|3(?:2(?:[02389][0-9]|1[0123456789]))|370|373|377)\\d{7}$"
+                    },
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "prompt_tokens": 152,
+                "completion_tokens": 834,
+                "total_tokens": 986
+            }
+        }
     },
     {
         "expression": "^(?!0{1})\\d{6}",
@@ -86120,7 +86580,99 @@
             "324565tr"
         ],
         "id": 2699,
-        "output": "Request timed out: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)"
+        "output": {
+            "id": "chatcmpl-8DzHBqOjKdC1jVviuh9c57JN9hMpT",
+            "object": "chat.completion",
+            "created": 1698344501,
+            "model": "gpt-3.5-turbo-0613",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^0*[1-9][0-9]*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 1,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0*)[1-9]\\d*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 2,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0*)([1-9]\\d*)$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 3,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0*[1-9]\\d*)$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 4,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0*)([1-9]\\d*)$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 5,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0*)[1-9][0-9]*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 6,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0*[1-9]\\d*)$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 7,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^0*[1-9]\\d*$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 8,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0*[1-9][0-9]*)$"
+                    },
+                    "finish_reason": "stop"
+                },
+                {
+                    "index": 9,
+                    "message": {
+                        "role": "assistant",
+                        "content": "^(0*)([1-9]\\d*)$"
+                    },
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "prompt_tokens": 51,
+                "completion_tokens": 109,
+                "total_tokens": 160
+            }
+        }
     },
     {
         "expression": "[0](\\d{9})|([0](\\d{2})( |-|)((\\d{3}))( |-|)(\\d{4}))|[0](\\d{2})( |-|)(\\d{7})|(\\+|00|09)(\\d{2}|\\d{3})( |-|)(\\d{2})( |-|)((\\d{3}))( |-|)(\\d{4})",
