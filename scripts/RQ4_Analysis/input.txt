@@ -1,0 +1,448 @@
+\s*\n\s*
+[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]
+.*[/\\]
+.*\.
+if\s*\([^)]+\)\s*\{\s*\}(?!\s*else)
+^(([^=;]+))\s*=\s*([^\n\r\0]*)
+^((?:=)?([^=;]*)\s*=\s*)?([^\n\r\0]*)
+*, *
+[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}
+\&([^;]+);
+\s+$
+^(`+)\s*([\s\S]*?[^`])\s*\1(?!`)
+^(.*?)\/(.*?)([\t ]*;.*)?$
+(?: BePC|[ .]*fc[ \d.]+)$
+^ +| +$
+(\d+)milli(?:second)?[s]?
+(\d+)second[s]?
+(\d+)minute[s]?
+(\d+)hour[s]?
+(\d+)day[s]?
+(\d+)month[s]?
+(\d+)year[s]?
+(\d+[a-zA-Z]+)?
+([A-Z\d]+)([A-Z][a-z])
+\&([^;]+);
+^\s+|\s+$
+(^\s+|\s+$)
+(?:charset|encoding)\s*=\s*['"]? *([\w\-]+)
+Dell.*Streak|Dell.*Aero|Dell.*Venue|DELL.*Venue Pro|Dell Flash|Dell Smoke|Dell Mini 3iX|XCD28|XCD35|\\b001DL\\b|\\b101DL\\b|\\bGS01\\b
+(?=.*\bAndroid\b)(?=.*\bMobile\b)
+(?=.*\bAndroid\b)(?=.*\bSD4930UR\b)
+(?=.*\bAndroid\b)(?=.*\b(?:KFOT|KFTT|KFJWI|KFJWA|KFSOWI|KFTHWI|KFTHWA|KFAPWI|KFAPWA|KFARWI|KFASWI|KFSAWI|KFSAWA)\b)
+(?=.*\bWindows\b)(?=.*\bARM\b)
+(CriOS|Chrome)(?=.*\bMobile\b)
+^(?<host>[^ ]*) [^ ]* (?<user>[^ ]*) \[(?<time>[^\]]*)\] "(?<method>\S+)(?: +(?<path>(?:[^\"]|\\.)*?)(?: +\S*)?)?" (?<code>[^ ]*) (?<size>[^ ]*)(?: "(?<referer>(?:[^\"]|\\.)*)" "(?<agent>(?:[^\"]|\\.)*)")?$
+^(?:(?:[\w\-#_= /:]*|[+]|[!])(\(\?P<\w+>.+\)))+$
+\{generate_code_example(\(\s*(.+?)\s*\))*\|\s*(.+?)\s*\|\s*(.+?)\s*(\(\s*(.+)\s*\))?\}
+\# \{code_example\|\s*(.+?)\s*\}
+\/\/ \{code_example\|\s*(.+?)\s*\}
+\{generate_api_description(\(\s*(.+?)\s*\))}
+\{generate_api_title(\(\s*(.+?)\s*\))}
+\{generate_response_description(\(\s*(.+?)\s*\))}
+\{generate_parameter_description(\(\s*(.+?)\s*\))}
+/?(?P<events>([A-Z0-9_-]+/?)+)?
+.+\@.+\..+
+^[\r\n]+|[\r\n]+$
+[\r\n]+$
+^\s*(?:(\*|[-\w]*)\|)?((?:\\.|[\w\u00b0-\uFFFF-])+)\s*(?:(\S?)=\s*(?:(['"])((?:[^\\]|\\[^])*?)\4|(#?(?:\\.|[\w\u00b0-\uFFFF-])*)|)|)\s*([iIsS])?\s*\]
+^(?:(.*)@)?((?:[^\[\]%:/?#]|%[a-fA-F0-9]{2})*|(?:[0-9]{1,3}\.){3}[0-9]{1,3}|\[(?:(?:[0-9A-Fa-f]{1,4}:){6}(?:[0-9A-Fa-f]{1,4}:[0-9A-Fa-f]{1,4}|(?:[0-9]{1,3}\.){3}[0-9]{1,3})|::(?:[0-9A-Fa-f]{1,4}:){5}(?:[0-9A-Fa-f]{1,4}:[0-9A-Fa-f]{1,4}|(?:[0-9]{1,3}\.){3}[0-9]{1,3})|(?:[0-9A-Fa-f]{1,4})?::(?:[0-9A-Fa-f]{1,4}:){4}(?:[0-9A-Fa-f]{1,4}:[0-9A-Fa-f]{1,4}|(?:[0-9]{1,3}\.){3}[0-9]{1,3})|(?:(?:[0-9A-Fa-f]{1,4}:)?[0-9A-Fa-f]{1,4})?::(?:[0-9A-Fa-f]{1,4}:){3}(?:[0-9A-Fa-f]{1,4}:[0-9A-Fa-f]{1,4}|(?:[0-9]{1,3}\.){3}[0-9]{1,3})|(?:(?:[0-9A-Fa-f]{1,4}:){0,2}[0-9A-Fa-f]{1,4})?::(?:[0-9A-Fa-f]{1,4}:){2}(?:[0-9A-Fa-f]{1,4}:[0-9A-Fa-f]{1,4}|(?:[0-9]{1,3}\.){3}[0-9]{1,3})|(?:(?:[0-9A-Fa-f]{1,4}:){0,3}[0-9A-Fa-f]{1,4})?::[0-9A-Fa-f]{1,4}:(?:[0-9A-Fa-f]{1,4}:[0-9A-Fa-f]{1,4}|(?:[0-9]{1,3}\.){3}[0-9]{1,3})|(?:(?:[0-9A-Fa-f]{1,4}:){0,4}[0-9A-Fa-f]{1,4})?::(?:[0-9A-Fa-f]{1,4}:[0-9A-Fa-f]{1,4}|(?:[0-9]{1,3}\.){3}[0-9]{1,3})|(?:(?:[0-9A-Fa-f]{1,4}:){0,5}[0-9A-Fa-f]{1,4})?::[0-9A-Fa-f]{1,4}|(?:(?:[0-9A-Fa-f]{1,4}:){0,6}[0-9A-Fa-f]{1,4})?::)(?:(?:%25|%)(?:[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789._!\-~]|%[a-fA-F0-9]{2})+)?\])(?::([0-9]{0,5}))?$
+^data:(?<type>.*?),(?<data>.*?)(?:#(?<hash>.*))?$
+((\r\n|\r|\n)+) *$
+^" "(?P<local>[^@]*[^@.])" r"@" r"(?P<server>[^@]+(?:\.[^@]+)*)" r"$
+<pre>((.|\s)*?)</pre>
+(?:\[(?:[^\]\\"]|(["'])(?:(?!\1)[^\\]|\\.)*\1|\\.)*\])
+[&*$@%]#?(?:(?:::)*'?(?!\d)[\w$]+)+(?:::)*
+^[0-9]{10,11}\.[0-9]+ \[[0-9]+ .+\]( ".+?")+$
+^hwb\(\s*([+-]?\d*[\.]?\d+)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?[\d\.]+)\s*)?\)$
+\s*<!Entity\s+\S*\s*(?:"|')[^"]+(?:"|')\s*>
+\[?(?:\s*<![A-Z]+[^>]*>\s*)*\]?
+^\s*(?:<\?xml[^>]*>\s*)?(?:<!doctype svg[^>]*\s*(?:\[?(?:\s*<![^>]*>\s*)*\]?)*[^>]*>\s*)?(?:<svg[^>]*>[^]*<\/svg>|<svg[^/>]*\/\s*>)\s*$
+\[[!"#%&'()*+,-./{|}<>_~]+ (?:\[[^\]]+\]|[^\]])+\]
+\[\[.+?[\]]*\]\]
+\[https?:\/\/[^\s\]]+(?:\s+[^\]]*[^\s])?\]
+\[[^\]]*[^\s]\s+https?:\/\/[^\s\]]+\]
+(?<=^| )https?:\/\/[^\s\]]+
+android.+[;\/]\s+(Barnes[&\s]+Noble\s+|BN[RT])(V?.*)\s+build
+[+-]?(\d+)*\.\d+%?
+\s+(?:.|\n)*?\s+
+(\{\s+)(\S+)(\s+[^}]+\s+\}\s)
+.*``.*``.*
+(\s*)(?:(.+)(\s*)(=)(\s*))?(.+)(\()(.*)(\))(\s*)
+(%config)(\s*\(\s*)(\w+)(\s*=\s*)(.*?)(\s*\)\s*)
+(%new)(\s*)(\()(\s*.*?\s*)(\))
+(\$)(evoque|overlay)(\{(%)?)(\s*[#\w\-"\'.]+[^=,%}]+?)?
+(\.\w+\b)(\s*=\s*)([^;]*)(\s*;)
+^([^-]+)-([A-Za-z0-9+/=]{44,88})(\?[\x21-\x7E]*)*$
+-\*-\s*([^\r\n]*?)\s*-\*-
+\[\#(\w+)\s*([^@]*)\s*@(\w+)([^\]]*)\]
+^```\s*?([\w+-]+)?\s*?\n
+^(https?|ftp):\/\/(-\.)?([^\s\/?\.#]+\.?)+(\/[^\s]*)?[^\s\.,]$
+(?:^|;)\s* + name + \s*:\s*([^;]*)
+[\000\011\012\014\015\040]+trailer[\000\011\012\014\015\040]*\<\<(.*\>\>)[\000\011\014\015\040]*[\r\n]+[\000\011\014\015\040]*startxref[\000\011\014\015\040]*[\r\n]+[\000\011\014\015\040]*([0-9]+)[\000\011\014\015\040]*[\r\n]+[\000\011\014\015\040]*%%EOF[\000\011\012\014\015\040]*$
+[\000\011\012\014\015\040]*trailer[\000\011\012\014\015\040]*\<\<(.*?\>\>)[\000\011\014\015\040]*[\r\n]+[\000\011\014\015\040]*startxref[\000\011\014\015\040]*[\r\n]+[\000\011\014\015\040]*([0-9]+)[\000\011\014\015\040]*[\r\n]+[\000\011\014\015\040]*%%EOF[\000\011\012\014\015\040]*
+^\s*[+-.]?\s*(?:(?:\d+(?:(\.|,)\d+)?(?:e[+-]?\d+)?)|(?:0x[a-f\d]+))\s*$
+hsl\(\s*(\d+\.?\d*)\s*,\s*(\d+\.?\d*)%\s*,\s*(\d+\.?\d*)%\s*\)$
+hs[bv]\(\s*(\d+\.?\d*)\s*,\s*(\d+\.?\d*)%\s*,\s*(\d+\.?\d*)%\s*\)$
+^(?:\r|\n)+|(?:\r|\n)+$
+^(.)(.*?)\t(.*?)\t(.*?)\t(.*?)\u000d\u000a$
+^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$
+\/\*\s*# sourceMappingURL=(.*)\*\/
+\/\*\s*# sourceMappingURL=.*\*\/
+((?:(?:twaalf|zeven|negen|twee|drie|vier|vijf|acht|tien|een|zes|elf)|[0-9]+|[0-9]+\.[0-9]+|een?|halve?))\s*((?:seconden|minuten|maanden|second|minute|dagen|weken|maand|jaren|mins|uren|week|jaar|sec|min|hrs|uur|dag|hr|jr|h))\s*
+(?:(?:about|around)\s*)?(?:(?:(?:twaalf|zeven|negen|twee|drie|vier|vijf|acht|tien|een|zes|elf)|[0-9]+|[0-9]+\.[0-9]+|een?|halve?))\s*(?:(?:seconden|minuten|maanden|second|minute|dagen|weken|maand|jaren|mins|uren|week|jaar|sec|min|hrs|uur|dag|hr|jr|h))\s*\s*(?:,?\s*(?:(?:(?:twaalf|zeven|negen|twee|drie|vier|vijf|acht|tien|een|zes|elf)|[0-9]+|[0-9]+\.[0-9]+|een?|halve?))\s*(?:(?:seconden|minuten|maanden|second|minute|dagen|weken|maand|jaren|mins|uren|week|jaar|sec|min|hrs|uur|dag|hr|jr|h))\s*)*
+\/\*\s*# sourceMappingURL=(.*)\s*\*\/
+\/\*\s*# sourceMappingURL=.*\s*\*\/
+^([^:]+):(?:(?:[^@:]+(?:[^@]+)?@)?([^/]*))[/](.+?)(?:[.]git)?($|#)
+\%(?:\(([\w_.]+)\)|([1-9]\d*)\$)?([0 +\-\#]*)(\*|\d+)?(\.)?(\*|\d+)?[hlL]?([\%bscdeEfFgGioOuxX])
+^data:(\w*\/\w*);*(charset=[\w=-]*)*;*$
+^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$
+(^[ \t]*)\[(?!\[)(?:(["'$`])(?:(?!\2)[^\\]|\\.)*\2|\[(?:[^\]\\]|\\.)*\]|[^\]\\]|\\.)*\]
+^\|={3,}(?:(?:\r?\n|\r).*)*?(?:\r?\n|\r)\|={3,}$
+\b[a-z\d][a-z\d-]*::?(?:(?:\S+)??\[(?:[^\]\\"]|(["'])(?:(?!\1)[^\\]|\\.)*\1|\\.)*\])
+(^|[^\\](?:\\\\)*)(["'])(?:\\[\s\S]|\$\([^)]+\)|`[^`]+`|(?!\2)[^\\])*\2
+((?:^|[&(])[ \t]*)for(?: ?\/[a-z?](?:[ :](?:"[^"]*"|\S+))?)* \S+ in \([^)]+\) do
+((?:^|[&(])[ \t]*)if(?: ?\/[a-z?](?:[ :](?:"[^"]*"|\S+))?)* (?:not )?(?:cmdextversion \d+|defined \w+|errorlevel \d+|exist \S+|(?:"[^"]*"|\S+)?(?:==| (?:equ|neq|lss|leq|gtr|geq) )(?:"[^"]*"|\S+))
+((?:^|[&(])[ \t]*)set(?: ?\/[a-z](?:[ :](?:"[^"]*"|\S+))?)* (?:[^^&)\r\n]|\^(?:\r\n|[\s\S]))*
+"(?:%\s*\n\s*%|%.|[^%"\r\n])*"
+"(?:[^\\"\r\n]|\\(?:[abfnrtv\\"]|\d+|x[0-9a-fA-F]+))*"
+(?:\w+_)?(['"])(?:\1\1|&(?:\r\n?|\n)(?:\s*!.+(?:\r\n?|\n))?|(?!\1).)*(?:\1|&)
+("|')(?:(?!\1|\$\{)[^\\]|\\.|\$\{(?:[^<()"']|\((?:[^<()"']|\((?:[^<()"']|\((?:[^<()"']|\((?:[^\s\S])*\)|<(?!#--)|<#--(?:[^-]|-(?!->))*-->|"(?:[^\\"]|\\.)*"|'(?:[^\\']|\\.)*')*\)|<(?!#--)|<#--(?:[^-]|-(?!->))*-->|"(?:[^\\"]|\\.)*"|'(?:[^\\']|\\.)*')*\)|<(?!#--)|<#--(?:[^-]|-(?!->))*-->|"(?:[^\\"]|\\.)*"|'(?:[^\\']|\\.)*')*\)|<(?!#--)|<#--(?:[^-]|-(?!->))*-->|"(?:[^\\"]|\\.)*"|'(?:[^\\']|\\.)*')*?\})*\1
+((?:^|[^\\])(?:\\\\)*)\$\{(?:[^<()"']|\((?:[^<()"']|\((?:[^<()"']|\((?:[^<()"']|\((?:[^\s\S])*\)|<(?!#--)|<#--(?:[^-]|-(?!->))*-->|"(?:[^\\"]|\\.)*"|'(?:[^\\']|\\.)*')*\)|<(?!#--)|<#--(?:[^-]|-(?!->))*-->|"(?:[^\\"]|\\.)*"|'(?:[^\\']|\\.)*')*\)|<(?!#--)|<#--(?:[^-]|-(?!->))*-->|"(?:[^\\"]|\\.)*"|'(?:[^\\']|\\.)*')*\)|<(?!#--)|<#--(?:[^-]|-(?!->))*-->|"(?:[^\\"]|\\.)*"|'(?:[^\\']|\\.)*')*?\}
+((?:^|\r?\n|\r)[\t ]*)[%.#][\w\-#.]*[\w\-](?:\([^)]+\)|\{(?:\{[^}]+\}|[^}])+\}|\[[^\]]+\])*[\/<>]*
+(^|[^#])\{(?:\{[^}]+\}|[^}])+\}
+"(?:[^\\$"]|\\[\s\S]|\$(?:(?=")|\$+|[^"${])|\$\{(?:[^{}"]|"(?:[^\\"]|\\[\s\S])*")*\})*"
+(["'])(?:(?!\1)[^\\\r\n]|\\z(?:\r\n|\s)|\\(?:\r\n|[\s\S]))*\1|\[(=*)\[[\s\S]*?\]\2\]
+(^|[[{(=:,\s])(?:[^#"\',:=[\]{}()\s`-]|[:-][^"\',=[\]{}()\s])(?:[^,:=\]})(\s]+|:(?![\s,\]})]|$)|[ \t]+[^#,:=\]})(\s])*
+(^|(?:^|(?!'').)[^\\])\$\{(?:[^}]|\{[^}]*\})*}
+\b0b[01]+\b|\b0x[\da-f]+\b|(?:\b\d+(?:_\d+)*\.?(?:\d+(?:_\d+)*)*|\B\.\d+)(?:e[+-]?\d+)?
+(@\("([^"\r\n\/):]+)"(?:\/[nrts$uL]*)?\).*(?:\r?\n|\r))(?:.*(?:\r?\n|\r))*?[ \t]*\|?[ \t]*-?[ \t]*\2
+(@\(([^"\r\n\/):]+)(?:\/[nrts$uL]*)?\).*(?:\r?\n|\r))(?:.*(?:\r?\n|\r))*?[ \t]*\|?[ \t]*-?[ \t]*\2
+(["'])(?:\$\{(?:[^'"}]|(["'])(?:(?!\2)[^\\]|\\[\s\S])*\2)+\}|(?!\1)[^\\]|\\[\s\S])*\1
+(^|\r?\n|\r)\/[\t ]*(?:(?:\r?\n|\r)(?:.*(?:\r?\n|\r))*?(?:\\(?=[\t ]*(?:\r?\n|\r))|$)|\S.*)
+(\s*)(?:\+[=-]+)+\+(?:\r?\n|\r)(?:\1(?:[+|].+)+[+|](?:\r?\n|\r))+\1(?:\+[=-]+)+\+
+(\s*)(?:=+ +)+=+(?:(?:\r?\n|\r)\1.+)+(?:\r?\n|\r)\1(?:=+ +)+=+(?=(?:\r?\n|\r){2}|\s*$)
+("|')(?:#\{[^}]+\}|\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1
+([ \t]*)\S(?:,?[^,\r\n]+)*(?:,(?:\r?\n|\r)\1[ \t]+\S(?:,?[^,\r\n]+)*)*
+(?:[\w-]|\$[-\w]+|#\{\$[-\w]+\})+(?=\s*:)
+(["'])(?:\\[\s\S]|\$\([^)]+\)|`[^`]+`|(?!\1)[^\\])*\1
+(^[ \t]*)(?:(?=\S)(?:[^{}\r\n:()]|::?[\w-]+(?:\([^)\r\n]*\))?|\{[^}\r\n]+\})+)(?:(?:\r?\n|\r)(?:\1(?:(?=\S)(?:[^{}\r\n:()]|::?[\w-]+(?:\([^)\r\n]*\))?|\{[^}\r\n]+\})+)))*(?:,$|\{|(?=(?:\r?\n|\r)(?:\{|\1[ \t]+)))
+("|')(?:\\(?:\((?:[^()]|\([^)]+\))+\)|\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1
+(^[^\S\r\n]*)---(?:\r\n?|\n)(?:.*(?:\r\n?|\n))*?[^\S\r\n]*\.\.\.$
+\$F:[-\w.]+\?[-\w.]+(?:,(?:\|?(?:[-#.^+*~]*(?:[\w+][^$]*)|=(?:[\S+][^$]*)|@[-#]*(?:\w+.)[\w+.]+)?)*)?\$
+\$XF:{[-\w.]+\?[-\w.]+(?:,(?:\|?(?:[-#.^+*~]*(?:[\w+][^$]*)|=(?:[\S+][^$]*)|@[-#]*(?:\w+.)[\w+.]+)?)*)?}:XF\$
+((?:^|\r?\n|\r)[ \t]*)(?:Ability|Ahoy matey!|Arwedd|Aspekt|Besigheid Behoefte|Business Need|Caracteristica|Característica|Egenskab|Egenskap|Eiginleiki|Feature|Fīča|Fitur|Fonctionnalité|Fonksyonalite|Funcionalidade|Funcionalitat|Functionalitate|Funcţionalitate|Funcționalitate|Functionaliteit|Fungsi|Funkcia|Funkcija|Funkcionalitāte|Funkcionalnost|Funkcja|Funksie|Funktionalität|Funktionalitéit|Funzionalità|Hwaet|Hwæt|Jellemző|Karakteristik|laH|Lastnost|Mak|Mogucnost|Mogućnost|Moznosti|Možnosti|OH HAI|Omadus|Ominaisuus|Osobina|Özellik|perbogh|poQbogh malja'|Potrzeba biznesowa|Požadavek|Požiadavka|Pretty much|Qap|Qu'meH 'ut|Savybė|Tính năng|Trajto|Vermoë|Vlastnosť|Właściwość|Značilnost|Δυνατότητα|Λειτουργία|Могућност|Мөмкинлек|Особина|Свойство|Үзенчәлеклелек|Функционал|Функционалност|Функция|Функціонал|תכונה|خاصية|خصوصیت|صلاحیت|کاروبار کی ضرورت|وِیژگی|रूप लेख|ਖਾਸੀਅਤ|ਨਕਸ਼ ਨੁਹਾਰ|ਮੁਹਾਂਦਰਾ|గుణము|ಹೆಚ್ಚಳ|ความต้องการทางธุรกิจ|ความสามารถ|โครงหลัก|기능|フィーチャ|功能|機能):(?:[^:]+(?:\r?\n|\r|$))*
+^([+-]?[0-9]*[.]?[0-9]+(px|cm|mm|in|pc|pt|ch|em|ex|rem|vh|vw|vmin|vmax)|0)$
+^[+-]?[0-9]*[.]?[0-9]+%$
+[\d.]+[\w%]+
+(?![-_])(?:[-\w\u00a1-\uffff]{0,63}[^-_]\.)+(?:[a-z\u00a1-\uffff]{2,})
+^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()*+,;=%]+$
+mso-level-number-format:([^;]*);
+(<span\s+style=['"]mso-spacerun:yes['"]>[\s]*?)[\r\n]+(\s*<\/span>)
+>(\s*[\r\n]\s*)<
+^\d+\.?\d*%$
+AppleWebKit/\d+\.\d+.* Safari.* (CreativeCloud)/(\d+)\.(\d+).(\d+)
+Google.*/\+/web/snippet
+(MSIE) (\d+)\.(\d+)([a-z]\d|[a-z]|);.* MSIECrawler
+\[FB.*;(FBAV)/(\d+)(?:\.(\d+)|)(?:\.(\d+)|)
+\[FB.*;
+\[(Pinterest)/[^\]]+\]
+Mozilla.*Mobile.*(Instagram).(\d+)\.(\d+)\.(\d+)
+Mozilla.*Mobile.*(Flipboard).(\d+)\.(\d+)\.(\d+)
+Mozilla.*Mobile.*(Flipboard-Briefing).(\d+)\.(\d+)\.(\d+)
+Mozilla.*Mobile.*(Onefootball)\/Android.(\d+)\.(\d+)\.(\d+)
+Mozilla.*Mobile.*AspiegelBot
+(?:Mobile|Tablet);.*(Firefox)/(\d+)\.(\d+)
+(Firefox).*Tablet browser (\d+)\.(\d+)\.(\d+)
+(Opera Tablet).*Version/(\d+)\.(\d+)(?:\.(\d+)|)
+(Opera)/.+Opera Mobi.+Version/(\d+)\.(\d+)
+(Opera)/(\d+)\.(\d+).+Opera Mobi
+Opera Mobi.+(Opera)(?:/|\s+)(\d+)\.(\d+)
+(Opera)/9.80.*Version/(\d+)\.(\d+)(?:\.(\d+)|)
+(?:Mobile Safari).*(OPR)/(\d+)\.(\d+)\.(\d+)
+(?:Chrome).*(OPR)/(\d+)\.(\d+)\.(\d+)
+Chrome/.+( MMS)/(\d+).(\d+).(\d+)
+PLAYSTATION 3.+WebKit
+AppleWebKit.+ (NX)/(\d+)\.(\d+)\.(\d+)
+Windows Phone .*(Edge)/(\d+)\.(\d+)
+Mozilla.+Android.+(GSA)/(\d+)\.(\d+)\.(\d+)
+Mobile.*(DuckDuckGo)/(\d+)
+Version/.+(Chrome)/(\d+)\.(\d+)\.(\d+)\.(\d+)
+; wv\).+(Chrome)/(\d+)\.(\d+)\.(\d+)\.(\d+)
+Mobile .*(Chrome)/(\d+)\.(\d+)\.(\d+)\.(\d+)
+(Chrome)/(\d+)\.(\d+)\.(\d+).* MRCHROME
+(Chrome)/(\d+)\.(\d+)\.(\d+)[\d.]* Iron[^/]
+^(foobar)\S+/([^.\s]+)\.([^.\s]+|)\.?([^.\s]+|)
+^(Clementine)\S+ ([^.\s]+)\.([^.\s]+|)\.?([^.\s]+|)
+(amarok)/([^.\s]+)\.([^.\s]+|)\.?([^.\s]+|)
+(MSIE) (\d+)\.(\d+).*XBLWP7
+(iPod|iPhone|iPad).+GSA/(\d+)\.(\d+)\.(\d+)(?:\.(\d+)|) Mobile
+(iPod|iPhone|iPad).+Version/(\d+)\.(\d+)(?:\.(\d+)|).*[ +]Safari
+(iPod|iPod touch|iPhone|iPad);.*CPU.*OS[ +](\d+)_(\d+)(?:_(\d+)|).* AppleNews\/\d+\.\d+\.\d+?
+(iPod|iPhone|iPad).+Version/(\d+)\.(\d+)(?:\.(\d+)|)
+(iPod|iPod touch|iPhone|iPad).* Safari
+(PlayBook).+RIM Tablet OS (\d+)\.(\d+)\.(\d+)
+(Black[bB]erry|BB10).+Version/(\d+)\.(\d+)\.(\d+)
+(AppleWebKit)/(\d+)(?:\.(\d+)|)\+ .* Safari
+(Version)/(\d+)\.(\d+)(?:\.(\d+)|).*Safari/
+HbbTV/\d+\.\d+\.\d+ \(;(Samsung);SmartTV([0-9]{4});.*FXPDEUC
+HbbTV/\d+\.\d+\.\d+ \(;(Samsung);SmartTV([0-9]{4});.*MST12DEUC
+HbbTV/1\.1\.1 \(; (Philips);.*NETTV/4
+HbbTV/1\.1\.1 \(; (Philips);.*NETTV/3
+HbbTV/1\.1\.1 \(; (Philips);.*NETTV/2
+HbbTV/\d+\.\d+\.\d+.*(firetv)-firefox-plugin (\d+).(\d+).(\d+)
+HbbTV/\d+\.\d+\.\d+ \(.*; ?([a-zA-Z]+) ?;.*(201[1-9]).*\)
+(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone)[ +]+(\d+)[_\.](\d+)(?:[_\.](\d+)|).*Outlook-iOS-Android
+ArcGIS\.?(iOS|Android)-\d+\.\d+(?:\.\d+|)(?:[^\/]+|)\/(\d+)(?:\.(\d+)(?:\.(\d+)|)|)
+(x86_64|aarch64)\ (\d+)\.(\d+)\.(\d+).*Chrome.*(?:CitrixChromeApp)$
+\w+\s+Mac OS X\s+\w+\s+(\d+).(\d+).(\d+).*
+(Dar)(win)/(9).(\d+).*\((?:i386|x86_64|Power Macintosh)\)
+(Dar)(win)/(10).(\d+).*\((?:i386|x86_64)\)
+(Dar)(win)/(11).(\d+).*\((?:i386|x86_64)\)
+(Dar)(win)/(12).(\d+).*\((?:i386|x86_64)\)
+(Dar)(win)/(13).(\d+).*\((?:i386|x86_64)\)
+(iPhone|iPad|iPod).*Mac OS X.*Version/(\d+)\.(\d+)
+(CFNetwork)/(5)48\.0\.3.* Darwin/11\.0\.0
+(CFNetwork)/(5)48\.(0)\.4.* Darwin/(1)1\.0\.0
+CFNetwork/7.* Darwin/15\.4\.\d+
+CFNetwork/7.* Darwin/15\.5\.\d+
+CFNetwork/7.* Darwin/15\.6\.\d+
+CFNetwork/.* Darwin/17\.\d+.*\(x86_64\)
+CFNetwork/.* Darwin/16\.\d+.*\(x86_64\)
+CFNetwork/8.* Darwin/15\.\d+.*\(x86_64\)
+CFNetwork/.* Darwin/(9)\.\d+
+CFNetwork/.* Darwin/(10)\.\d+
+CFNetwork/.* Darwin/(11)\.\d+
+CFNetwork/.* Darwin/(13)\.\d+
+CFNetwork/6.* Darwin/(14)\.\d+
+CFNetwork/7.* Darwin/(14)\.\d+
+CFNetwork/7.* Darwin/(15)\.\d+
+CFNetwork/8.* Darwin/16\.5\.\d+
+CFNetwork/8.* Darwin/16\.6\.\d+
+CFNetwork/8.* Darwin/16\.7\.\d+
+CFNetwork/8.* Darwin/(16)\.\d+
+CFNetwork/8.* Darwin/17\.0\.\d+
+CFNetwork/8.* Darwin/17\.2\.\d+
+CFNetwork/8.* Darwin/17\.3\.\d+
+CFNetwork/8.* Darwin/17\.4\.\d+
+CFNetwork/8.* Darwin/17\.5\.\d+
+CFNetwork/9.* Darwin/17\.6\.\d+
+CFNetwork/9.* Darwin/17\.7\.\d+
+CFNetwork/8.* Darwin/(17)\.\d+
+CFNetwork/9.* Darwin/18\.0\.\d+
+CFNetwork/9.* Darwin/(18)\.\d+
+CFNetwork/.* Darwin/
+(Symbian/3).+NokiaBrowser/7\.3
+(Symbian/3).+NokiaBrowser/7\.4
+(BB10);.+Version/(\d+)\.(\d+)\.(\d+)
+(Black[Bb]erry).+Version/(\d+)\.(\d+)\.(\d+)(?:\.(\d+)|)
+\((?:Mobile|Tablet);.+Gecko/18.0 Firefox/\d+\.\d+
+\((?:Mobile|Tablet);.+Gecko/18.1 Firefox/\d+\.\d+
+\((?:Mobile|Tablet);.+Gecko/26.0 Firefox/\d+\.\d+
+\((?:Mobile|Tablet);.+Gecko/28.0 Firefox/\d+\.\d+
+\((?:Mobile|Tablet);.+Gecko/30.0 Firefox/\d+\.\d+
+\((?:Mobile|Tablet);.+Gecko/32.0 Firefox/\d+\.\d+
+\((?:Mobile|Tablet);.+Gecko/34.0 Firefox/\d+\.\d+
+\((?:Mobile|Tablet);.+Firefox/\d+\.\d+
+(Linux)[ /](\d+)\.(\d+)(?:\.(\d+)|).*gentoo
+(?:(?:iPhone|Windows CE|Windows Phone|Android).*(?:(?:Bot|Yeti)-Mobile|YRSpider|BingPreview|bots?/\d|(?:bot|spider)\.html)|AdsBot-Google-Mobile.*iPhone)
+(?:DoCoMo|\bMOT\b|\bLG\b|Nokia|Samsung|SonyEricsson).*(?:(?:Bot|Yeti)-Mobile|bots?/\d|(?:bot|crawler)\.html|(?:jump|google|Wukong)bot|ichiro/mobile|/spider|YahooSeeker)
+PTST/\d+(?:\.)?\d+$
+Mozilla.*Mobile.*AspiegelBot
+Mozilla.*AspiegelBot
+\bSmartWatch {0,2}\( {0,2}([^;]+) {0,2}; {0,2}([^;]+) {0,2};
+Android Application[^\-]+ - (Sony) ?(Ericsson|) (.+) \w+ -
+Android Application[^\-]+ - (?:HTC|HUAWEI|LGE|LENOVO|MEDION|TCT) (HTC|HUAWEI|LG|LENOVO|MEDION|ALCATEL)[ _\-](.+) \w+ -
+Android Application[^\-]+ - ([^ ]+) (.+) \w+ -
+Android [34].*; *(A100|A101|A110|A200|A210|A211|A500|A501|A510|A511|A700(?: Lite| 3G|)|A701|B1-A71|A1-\d{3}|B1-\d{3}|V360|V370|W500|W500P|W501|W501P|W510|W511|W700|Slider SL101|DA22[^;/]+?)(?: Build|\) AppleWebKit)
+; *(Z1[1235]0|E320[^/]*|S500|S510|Liquid[^;/]*|Iconia A\d+)(?: Build|\) AppleWebKit)
+; *(Advent |)(Vega(?:Bean|Comb|)).*?(?: Build|\) AppleWebKit)
+; *AIRIS[ _\-]?([^/;\)]+) *(?:;|\)|Build)
+; *(ALLVIEW[ _]?|Allview[ _]?)((?:Speed|SPEED).*?)(?: Build|\) AppleWebKit)
+; *(?:ARCHOS|Archos) ?(GAMEPAD.*?)(?: Build|\) AppleWebKit)
+(?:ARCHOS|Archos)[ _]?(.*?)(?: Build|[;/\(\)\-]|$)
+; *ASUS[ _]*([^;/]+?)(?: Build|\) AppleWebKit)
+; *(BlackBird)[ _](I8.*?)(?: Build|\) AppleWebKit)
+; *(BlackBird)[ _](.*?)(?: Build|\) AppleWebKit)
+; *(?:Cat)(Nova.*?)(?: Build|\) AppleWebKit)
+; *(Excite|ICE)[ _](\d+[^;/]+?)(?: Build|\) AppleWebKit)
+; *([^;/]*)Coolpad[ _]([^;/]+?)(?: Build|\) AppleWebKit)
+; *(CUBE[ _])?([KU][0-9]+ ?GT.*?|A5300)(?: Build|\) AppleWebKit)
+; *(?:Dell|DELL)[ _](Aero|Venue|Thunder|Mini.*?|Streak[ _]Pro)(?: Build|\) AppleWebKit)
+; *[^;/]+ Build/(?:CROSS|Cross)+[ _\-]([^\)]+)
+; *Explay[_ ](.+?)(?:[\)]| Build)
+; *(IQ.*?)(?: Build|\) AppleWebKit)
+; *(Fly|FLY)[ _](IQ[^;]+?|F[34]\d+[^;]*?);?(?: Build|\) AppleWebKit)
+; *((?:FONE|QUANTUM|INSIGNIA) \d+[^;/]*|PLAYTAB)(?: Build|\) AppleWebKit)
+; *(Pixel.*?)(?: Build|\) AppleWebKit)
+; *(GSmart)[ -]([^/]+)(?: Build|\) AppleWebKit)
+; *(imx5[13]_[^/]+)(?: Build|\) AppleWebKit)
+; *Haier[ _\-]([^/]+)(?: Build|\) AppleWebKit)
+Build/HCL ME Tablet ([^;\)]+)[\);]
+; *([^;\/]+) Build/HCL
+; *HP ([^/]+)(?: Build|\) AppleWebKit)
+; *([^/]+_tenderloin)(?: Build|\) AppleWebKit)
+; *([^;/]+) Build[/ ]Huawei(MT1-U06|[A-Z]+\d+[^\);]+)\)
+; *([^;]+) Build/(?:Huawei|HUAWEI)
+; *(?:Ideos |IDEOS )([^;/]+\s*|\s*)Build
+; *(Orange Daytona|Pulse|Pulse Mini|Vodafone 858|C8500|C8600|C8650|C8660|Nexus 6P|ATH-.+?) Build[/ ]
+HTC Streaming Player [^\/]*/[^\/]*/ htc_([^/]+)
+(?:[;,] *|^)(?:htccn_chs-|)HTC[ _-]?([^;]+?)(?: *Build|clay|Android|-?Mozilla| Opera| Profile| UNTRUSTED|[;/\(\)]|$)
+; *(ADR6200|ADR6400L|ADR6425LVW|Amaze|DesireS?|EndeavorU|Eris|EVO|Evo\d[A-Z]+|HD2|IncredibleS?|Inspire[A-Z0-9]*|Inspire[A-Z0-9]*|Sensation[A-Z0-9]*|Wildfire)[ _-](.+?)(?:[/;\)]|Build|MIUI|1\.0)
+; *HYUNDAI (T\d[^/]*)(?: Build|\) AppleWebKit)
+; *(NT-\d+[^ ;/]*|Net[Tt]AB [^;/]+|Mercury [A-Z]+|iconBIT)(?: S/N:[^;/]+|)(?: Build|\) AppleWebKit)
+; *i-?mobile[ _]([^/]+)(?: Build|\) AppleWebKit)
+; *(i-(?:style|note)[^/]*)(?: Build|\) AppleWebKit)
+; *(ImPAD) ?(\d+(?:.)*?)(?: Build|\) AppleWebKit)
+; *(?:Intex[ _]|)(AQUA|Aqua)([ _\.\-])([^;/]+?) *(?:Build|;)
+; *([iI]Buddy)[ _]?(Connect)(?:_|\?_| |)([^;/]*) *(?:Build|;)
+; *(I-Buddy)[ _]([^;/]+?) *(?:Build|;)
+; *(iOCEAN) ([^/]+)(?: Build|\) AppleWebKit)
+; *Karbonn[ _]?([^;/]+) *(?:Build|;)
+; *([^;]+) Build/Karbonn
+; *(?:LAVA[ _]|)IRIS[ _\-]?([^/;\)]+) *(?:;|\)|Build)
+; *(?:LNV-|)(?:=?[Ll]enovo[ _\-]?|LENOVO[ _])(.+?)(?:Build|[;/\)])
+; *(E[34][0-9]{2}|LS[6-8][0-9]{2}|VS[6-9][0-9]+[^;/]+|Nexus 4|Nexus 5X?|GT540f?|Optimus (?:2X|G|4X HD)|OptimusX4HD) *(?:Build|;)
+; *(LG-)([A-Z]{1,2}\d{2,}[^,;/\)\(]*?)(?:Build| V\d+|[,;/\)\(]|$)
+^(LG)-([^;/]+)/ Mozilla/.*; Android
+; *(GenxDroid7|MSD7.*?|AX\d.*?|Tab 701|Tab 722)(?: Build|\) AppleWebKit)
+; *(M-PP[^;/]+|PhonePad ?\d{2,}[^;/]+?)(?: Build|\) AppleWebKit)
+; *(M-MP[^;/]+|SmartPad ?\d{2,}[^;/]+?)(?: Build|\) AppleWebKit)
+; *(?:meizu_|MEIZU )(.+?) *(?:Build|[;\)])
+; *(Cynus)[ _](F5|T\d|.+?) *(?:Build|[;/\)])
+; ?(NEC-)(.*?)(?: Build|\) AppleWebKit)
+; *(NXM\d+[A-Za-z0-9_]*|Next\d[A-Za-z0-9_ \-]*|NEXT\d[A-Za-z0-9_ \-]*|Nextbook [A-Za-z0-9_ ]*|DATAM803HC|M805)(?: Build|[\);])
+; *(Nokia)([ _\-]*)([^;/]*) Build
+; *(SKY[ _]|)(IM\-[AT]\d{3}[^;/]+).* Build/
+; *Pantech([^;/]+).* Build/
+Android 4\..*; *(M[12356789]|U[12368]|S[123])\ ?(pro)?(?: Build|\) AppleWebKit)
+; *(?:Polaroid[ _]|)((?:MIDC\d{3,}|PMID\d{2,}|PTAB\d{3,})[^;/]*?)(\/[^;/]*|)(?: Build|\) AppleWebKit)
+; *(POMP)[ _\-](.+?) *(?:Build|[;/\)])
+; *(PLT[0-9]{4}.*?)(?: Build|\) AppleWebKit)
+; *(SAMSUNG |Samsung |)((?:Galaxy (?:Note II|S\d)|GT-I9082|GT-I9205|GT-N7\d{3}|SM-N9005)[^;/]*)\/?[^;/]* Build/
+; *(SAMSUNG |Samsung )([^\/]*)\/[^ ]* Build/
+; *(SAMSUNG-|)(GT\-[BINPS]\d{4}[^\/]*)(\/[^ ]*) Build
+; (SAMSUNG-)([A-Za-z0-9\-]+).* Build/
+; *((?:SCH|SGH|SHV|SHW|SPH|SC|SM)\-[A-Za-z0-9 ]+)(/?[^ ]*|) Build
+; *((?:SC)\-[A-Za-z0-9 ]+)(/?[^ ]*|)\)
+((?:SCH)\-[A-Za-z0-9 ]+)(/?[^ ]*|) Build
+; *(SK\-.*?)(?: Build|\) AppleWebKit)
+; *(ST\d{4}.*)Build/ST
+; *(ST\d{4}.*?)(?: Build|\) AppleWebKit)
+; *(Xperia (?:A8|Arc|Acro|Active|Live with Walkman|Mini|Neo|Play|Pro|Ray|X\d+)[^;/]*) Build
+; *(Sprint )(.+?) *(?:Build|[;/])
+; *Build/.* (TOLINO_BROWSER)
+\b(T-Mobile)_([^_]+)_(.*) Build
+\b(T-Mobile)[_ ]?(.*?)Build
+; *(TM-MID\d+[^;/]+|TOUCHMATE|MID-750)(?: Build|\) AppleWebKit)
+; *(TM-SM\d+[^;/]+?)(?: Build|\) AppleWebKit)
+(TOUCH(?:TAB|PAD).+?)(?: Build|\) AppleWebKit)
+(VERTU) ([^;/]+?)(?: Build|\) AppleWebKit)
+; *(Videocon)[ _\-]([^;/]+?) *(?:Build|;)
+; *(GTablet.*?)(?: Build|\) AppleWebKit)
+(Vodafone) (.*?)(?: Build|\) AppleWebKit)
+; *XOLO[ _]([^;/]*tab.*)(?: Build|\) AppleWebKit)
+; *(PAD ?[79]\d+[^;/]*|TelePAD\d+[^;/])(?: Build|\) AppleWebKit)
+; *(SmartTab\d+)[^;]*(?: Build|\) AppleWebKit)
+(sprd)\-([^/]+)/
+; *(e\d{4}[a-z]?_?v\d+|v89_[^;/]+)[^;/]+ Build/
+Windows Phone [^;]+; .*?IEMobile/[^;\)]+[;\)] ?(?:ARM; ?Touch; ?|Touch; ?|)(?:ALCATEL)[^;]*; *([^;,\)]+)
+Windows Phone [^;]+; .*?IEMobile/[^;\)]+[;\)] ?(?:ARM; ?Touch; ?|Touch; ?|WpsLondonTest; ?|)(?:ASUS|Asus)[^;]*; *([^;,\)]+)
+Windows Phone [^;]+; .*?IEMobile/[^;\)]+[;\)] ?(?:ARM; ?Touch; ?|Touch; ?|)(?:DELL|Dell)[^;]*; *([^;,\)]+)
+Windows Phone [^;]+; .*?IEMobile/[^;\)]+[;\)] ?(?:ARM; ?Touch; ?|Touch; ?|WpsLondonTest; ?|)(?:HTC|Htc|HTC_blocked[^;]*)[^;]*; *(?:HTC|)([^;,\)]+)
+Windows Phone [^;]+; .*?IEMobile/[^;\)]+[;\)] ?(?:ARM; ?Touch; ?|Touch; ?|)(?:HUAWEI)[^;]*; *(?:HUAWEI |)([^;,\)]+)
+Windows Phone [^;]+; .*?IEMobile/[^;\)]+[;\)] ?(?:ARM; ?Touch; ?|Touch; ?|)(?:LG|Lg)[^;]*; *(?:LG[ \-]|)([^;,\)]+)
+Windows Phone [^;]+; .*?IEMobile/[^;\)]+[;\)] ?(?:ARM; ?Touch; ?|Touch; ?|)(?:rv:11; |)(?:NOKIA|Nokia)[^;]*; *(?:NOKIA ?|Nokia ?|LUMIA ?|[Ll]umia ?|)(\d{3,10}[^;\)]*)
+Windows Phone [^;]+; .*?IEMobile/[^;\)]+[;\)] ?(?:ARM; ?Touch; ?|Touch; ?|)(?:NOKIA|Nokia)[^;]*; *(RM-\d{3,})
+(?:Windows Phone [^;]+; .*?IEMobile/[^;\)]+[;\)]|WPDesktop;) ?(?:ARM; ?Touch; ?|Touch; ?|)(?:NOKIA|Nokia)[^;]*; *(?:NOKIA ?|Nokia ?|LUMIA ?|[Ll]umia ?|)([^;\)]+)
+Windows Phone [^;]+; .*?IEMobile/[^;\)]+[;\)] ?(?:ARM; ?Touch; ?|Touch; ?|)(?:Microsoft(?: Corporation|))[^;]*; *([^;,\)]+)
+Windows Phone [^;]+; .*?IEMobile/[^;\)]+[;\)] ?(?:ARM; ?Touch; ?|Touch; ?|WpsLondonTest; ?|)(?:SAMSUNG)[^;]*; *(?:SAMSUNG |)([^;,\.\)]+)
+Windows Phone [^;]+; .*?IEMobile/[^;\)]+[;\)] ?(?:ARM; ?Touch; ?|Touch; ?|WpsLondonTest; ?|)(?:TOSHIBA|FujitsuToshibaMobileCommun)[^;]*; *([^;,\)]+)
+Windows Phone [^;]+; .*?IEMobile/[^;\)]+[;\)] ?(?:ARM; ?Touch; ?|Touch; ?|WpsLondonTest; ?|)([^;]+); *([^;,\)]+)
+(?:^|; )SAMSUNG\-([A-Za-z0-9\-]+).* Bada/
+\(Mobile; ALCATEL ?(One|ONE) ?(Touch|TOUCH) ?([^;/]+?)(?:/[^;]+|); rv:[^\)]+\) Gecko/[^\/]+ Firefox/
+\(Mobile; (?:ZTE([^;]+)|(OpenC)); rv:[^\)]+\) Gecko/[^\/]+ Firefox/
+\(Mobile; ALCATEL([A-Za-z0-9\-]+); rv:[^\)]+\) Gecko/[^\/]+ Firefox/[^\/]+ KaiOS/
+\(Mobile; LYF\/([A-Za-z0-9\-]+)\/.+;.+rv:[^\)]+\) Gecko/[^\/]+ Firefox/[^\/]+ KAIOS/
+\(Mobile; Nokia_([A-Za-z0-9\-]+)_.+; rv:[^\)]+\) Gecko/[^\/]+ Firefox/[^\/]+ KAIOS/
+(?:NOKIA|Nokia)(?:\-| *)(?:([A-Za-z0-9]+)\-[0-9a-f]{32}|([A-Za-z0-9\-]+)(?:UCBrowser)|([A-Za-z0-9\-]+))
+Play[Bb]ook.+RIM Tablet OS
+webOS.*(P160U(?:NA|))/(\d+).(\d+)
+HPiPAQ([A-Za-z0-9]+)/\d+.\d+
+CFNetwork/.* Darwin/\d.*\(((?:Mac|iMac|PowerMac|PowerBook)[^\d]*)(\d+)(?:,|%2C)(\d+)
+CFNetwork/.* Darwin/\d+\.\d+\.\d+ \(x86_64\)
+CFNetwork/.* Darwin/\d
+(?:asus.*?ASUS|Asus|ASUS|asus)[\- ;]*((?:Transformer (?:Pad|Prime) |Transformer |Padfone |Nexus[ _]|)[A-Za-z0-9]+)
+([A-Za-z0-9]+)_W;FOMA
+([A-Za-z0-9]+);FOMA
+\b(?:HTC/|HTC/[a-z0-9]+/|)HTC[ _\-;]? *(.*?)(?:-?Mozilla|fingerPrint|[;/\(\)]|$)
+(HbbTV)/1\.1\.1.*CE-HTML/1\.\d;(Vendor/|)(THOM[^;]*?)[;\s].{0,30}(LF[^;]+);?
+(HbbTV)(?:/1\.1\.1|) ?(?: \(;;;;;\)|); *CE-HTML(?:/1\.\d|); *([^ ]+) ([^;]+);
+InettvBrowser/[0-9]+\.[0-9A-Z]+ \([^;]*;(Sony)([^;]*);[^;]*;[^\)]*\)
+InettvBrowser/[0-9]+\.[0-9A-Z]+ \([^;]*;([^;]*);[^;]*;[^\)]*\)
+(?:MSIE|XBMC).*\b(Xbox)\b
+(SMART-TV); .* Tizen
+SymbianOS/9\.\d.* Samsung[/\-]([A-Za-z0-9 \-]+)
+Android [^;]+; ([^ ]+) (Sony)/
+Android[\- ][\d]+\.[\d]+; [A-Za-z]{2}\-[A-Za-z]{0,2}; WOWMobile (.+)( Build[/ ]|\))
+Android[\- ][\d]+\.[\d]+\-update1; [A-Za-z]{2}\-[A-Za-z]{0,2} *; *(.+?)( Build[/ ]|\))
+Android[\- ][\d]+(?:\.[\d]+)(?:\.[\d]+|); *[A-Za-z]{2}[_\-][A-Za-z]{0,2}\-? *; *(.+?)( Build[/ ]|\))
+Android[\- ][\d]+(?:\.[\d]+)(?:\.[\d]+|); *[A-Za-z]{0,2}\- *; *(.+?)( Build[/ ]|\))
+Android[\- ][\d]+(?:\.[\d]+)(?:\.[\d]+|); *\-?[A-Za-z]{2}; *(.+?)( Build[/ ]|\))
+Android \d+?(?:\.\d+|)(?:\.\d+|); ([^;]+?)(?: Build|\) AppleWebKit).+? Mobile Safari
+Android \d+?(?:\.\d+|)(?:\.\d+|); ([^;]+?)(?: Build|\) AppleWebKit).+? Safari
+(Android 3\.\d|Opera Tablet|Tablet; .+Firefox/|Android.*(?:Tab|Pad))
+(Symbian|\bS60(Version|V\d)|\bS60\b|\((Series 60|Windows Mobile|Palm OS|Bada); Opera Mini|Windows CE|Opera Mobi|BREW|Brew|Mobile; .+Firefox/|iPhone OS|Android|MobileSafari|Windows *Phone|\(webOS/|PalmOS)
+(bot|BUbiNG|zao|borg|DBot|oegp|silk|Xenu|zeal|^NING|CCBot|crawl|htdig|lycos|slurp|teoma|voila|yahoo|Sogou|CiBra|Nutch|^Java/|^JNLP/|Daumoa|Daum|Genieo|ichiro|larbin|pompos|Scrapy|snappy|speedy|spider|msnbot|msrbot|vortex|^vortex|crawler|favicon|indexer|Riddler|scooter|scraper|scrubby|WhatWeb|WinHTTP|bingbot|BingPreview|openbot|gigabot|furlbot|polybot|seekbot|^voyager|archiver|Icarus6j|mogimogi|Netvibes|blitzbot|altavista|charlotte|findlinks|Retreiver|TLSProber|WordPress|SeznamBot|ProoXiBot|wsr\-agent|Squrl Java|EtaoSpider|PaperLiBot|SputnikBot|A6\-Indexer|netresearch|searchsight|baiduspider|YisouSpider|ICC\-Crawler|http%20client|Python-urllib|dataparksearch|converacrawler|Screaming Frog|AppEngine-Google|YahooCacheSystem|fast\-webcrawler|Sogou Pic Spider|semanticdiscovery|Innovazion Crawler|facebookexternalhit|Google.*/\+/web/snippet|Google-HTTP-Java-Client|BlogBridge|IlTrovatore-Setaccio|InternetArchive|GomezAgent|WebThumbnail|heritrix|NewsGator|PagePeeker|Reaper|ZooShot|holmes|NL-Crawler|Pingdom|StatusCake|WhatsApp|masscan|Google Web Preview|Qwantify|Yeti|OgScrper)
+^([`~]+|[^`~])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*~]|\b_|https?:\/\/|ftp:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@))|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@))
+^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$
+^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})).?)(?::\d{2,5})?(?:[/?#]\S*)?$
+rgba\([ \n\r\t]*(.+?)[ \n\r\t]*\)
+rgb\([ \n\r\t]*(.+?)[ \n\r\t]*\)
+\s*\n\s*
+([A-Z]+)([A-Z][a-z])
+.*\.
+^[^\s-_](?!.*?[-_]{2,})([a-z0-9-\\]{1,})[^\s]*[^-_\s]$
+\s+$
+\s*$
+\s*(\d+)\s*(\S+) (.*)
+\s+$
+^\S+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+$
+<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?(\/)?>|<\/\w+>
+\[([^\[\]]*|\[[^\[\]]*\])*\]|([A-Za-z])\2+|\.{3}|.
+^\s*(?:''|"")?\s*(?:,\s*(?:''|"")?\s*)*$
+(?:.*,)*[ \t]*([^ \t]+)[ \t]+realm=(["\']?)([^"\']*)\2
+(opera\s[mobiletab]+).+version\/([\w\.-]+)
+(trident).+rv[:\s]([\w\.]+).+like\sgecko
+version\/([\w\.]+).+?mobile\/\w+\s(safari)
+version\/([\w\.]+).+?(mobile\s?safari|safari)
+webkit.+?(gsa)\/([\w\.]+).+?(mobile\s?safari|safari)(\/[\w\.]+)
+(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+
+(htc)[;_\s-]+([\w\s]+(?=\)|\sbuild)|\w+)
+android.+(hm[\s\-_]*note?[\s_]*(?:\d\w)?)\s+build
+android.+(redmi[\s\-_]*(?:note|k)?(?:[\s_]?[\w\s]+))(?:\s+build|\))
+android.+(mi[\s\-_]*(?:a\d|one|one[\s_]plus|note lte)?[\s_]?(?:\d?\w?)[\s_]*(?:plus)?)\s+build
+android.+(mi[\s\-_]*(?:pad)(?:[\s_]?[\w\s]+))(?:\s+build|\))
+android.+[;\/\s]+(Venue[\d\s]{2,7})\s+build
+^\w+([\.\+-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$
+^(\s|\/\*.*?\*\/)*[\[\(\w]
+^rgb\(\s*(.+)\s*,\s*(.+)\s*,\s*(.+)\s*\)
+^rgba\(\s*(.+)\s*,\s*(.+)\s*,\s*(.+)\s*,\s*(.+)\s*\)
+^\s*|\s*$
+\s*$
+android.+(redmi[\s\-_]*(?:note)?(?:[\s_]*[\w\s]+))\s+build
+android.+(mi[\s\-_]*(?:pad)(?:[\s_]*[\w\s]+))\s+build
+"((?:\\[\x00-\x7f]|[^\x00-\x08\x0a-\x1f\x7f"])*)"
+"((?:\\[\x00-\x7f]|[^\x00-\x08\x0a-\x1f\x7f"])*)"
+(?:(?:(?:[a-z]+:)?\/\/)|www\.)(?:\S+(?::\S*)?@)?(?:localhost|(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?:(?:[a-z\u00a1-\uffff0-9][-_]*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#][^\s"]*)?
+^([-/:,#%.'"\s!\w]|\w-\w|'[\s\w]+'\s*|"[\s\w]+"|\([\d,%\.\s]+\))*$
+\bSmartWatch *\( *([^;]+) *; *([^;]+) *;
+; *([^;/]+) Build[/ ]Huawei(MT1-U06|[A-Z]+\d+[^\);]+)[^\);]*\)
+(HbbTV)/[0-9]+\.[0-9]+\.[0-9]+ \([^;]*; *(LG)E *; *([^;]*) *;[^;]*;[^;]*;\)
+(HbbTV)/[0-9]+\.[0-9]+\.[0-9]+ \([^;]*; *(?:CUS:([^;]*)|([^;]+)) *; *([^;]*) *;.*;
+^(?:(?:(?:https?|ftp):)?\/\/)(?:(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))?)(?::\d{2,5})?(?:[/?#]\S*)?$
+[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]
+<raw>[^\x00]+/("{{{{")
+^(\-|\+)?([1-9]+[0-9]*)$
+<!--([^-]+|[-][^-]+)*-->
+<!\[CDATA\[([^\]]+|\][^\]]|\]\][^>])*\]\]>
