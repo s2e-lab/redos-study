@@ -33,3 +33,33 @@ remove vulnerable regexes.
   - ReDoSAnalysis: Contains the scripts used to analyze the ReDoS patterns and the results presented in the RQ2.
   - RQ3_Analysis: Contains the scripts used to analyze the ReDoS in the real-world and the results presented in the RQ3.
   - Other scripts used to generate the fine-grained data and plots presented in the paper.
+
+## Usage
+### Installation
+
+Run the following command to install the required packages:
+```
+conda create -n "redos_study"  python=3.9.4
+conda activate redos_study
+pip install -r requirements.txt
+pip install torch torchvision torchaudio
+pip install accelerate
+```
+
+### Generation
+There are three Python files for three models: gpt35.py, Phi_RegexGen and T5_Regexgen.py
+
+You will need an OpenAI API key for gpt35.py and have to create a **config.json** file as the **example.json** file. Update your API key in the **config.json** file.
+
+*ReDoSHunter_Input_Creation.ipynb* will create the input for [ReDoSHunter](https://github.com/yetingli/ReDoSHunter). Check the corresponding link about running it.
+
+### Evaluation
+**Compilation.ipynb** will compile the Regexes and tests with the corresponding tests. It will generate {Model_name}_{Prompt_type}_Output_Compiled_Result.json. Then, you can run **Pass_at_k_Evaluation.ipynb** to get the pass@k score.
+
+**DFA_Equ_Evaluation.ipynb** will use *regex_dfa_equals.jar* to find out the DFA match and calculate the DFA-EQ@k score.
+
+
+**EM_Evaluation.ipynb** will calculate the Exact match ratio.
+
+### Other files
+- Files with the name *[gG]ithub* or *stackoverflow|SO* are used to collect the data from GitHub and StackOverflow. 
