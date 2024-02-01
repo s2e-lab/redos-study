@@ -1,5 +1,5 @@
-# ReDoS Comprehension from LLM and Developers' Discussions
-This repository contains the source code of the paper "Understanding Regular Expression Denial of Service (ReDoS): Insights from LLM-Generated Regexes and Developer Forums", conditionally accepted at the  32nd International Conference on Program Comprehension (ICPC 2024).
+# ReDoS Comprehension from LLM and Developer Forums
+This repository contains the source code of the paper "Understanding Regular Expression Denial of Service (ReDoS): Insights from LLM-Generated Regexes and Developer Forums", accepted at the  32nd International Conference on Program Comprehension (ICPC 2024).
 
 ## Abstract
 Regular expression Denial of Service (ReDoS) represents an algorithmic complexity attack that exploits the processing of regular
