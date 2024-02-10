@@ -1,5 +1,7 @@
 import json
 
+# This script checks if the merged Stack Overflow JSON file contains any duplicate items.
+
 # Load the merged JSON file
 with open("../data/SO_merged.json", "r") as merged_file:
     data = json.load(merged_file)

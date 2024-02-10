@@ -1,5 +1,7 @@
 import json
 
+# This script checks if the merged Stack Overflow JSON file contains any duplicate items.
+
 # Load the JSON files
 with open("../data/SO_evil_regex.json", "r") as file1, open("../data/SO_redos_regex.json", "r") as file2:
     data1 = json.load(file1)

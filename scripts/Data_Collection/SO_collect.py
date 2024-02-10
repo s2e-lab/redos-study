@@ -1,6 +1,7 @@
 import requests
 import json
 
+# This script collects questions or answers from Stack Overflow that contain the words "redos" and "regex" or "evil" and "regex".
 
 def search_questions(query):
     url = "https://api.stackexchange.com/2.2/search/excerpts"

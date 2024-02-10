@@ -1,5 +1,7 @@
 import json
 
+# This script checks if the merged Github JSON file contains any duplicate items.
+
 with open('../data/pull_requests_regex_evil.json', 'r') as f1, open('../data/pull_requests_regex_redos.json', 'r') as f2:
     data1 = json.load(f1)
     data2 = json.load(f2)

@@ -4,6 +4,7 @@ import os
 import time
 from tenacity import retry, stop_after_attempt, wait_fixed, retry_if_exception_type, wait_random_exponential
 
+# This script is used to collect pull requests from Github that contain the keyword "regex" and "redos" in the title or body.
 
 class RateLimitException(Exception):
     pass
@@ -33,10 +34,10 @@ date_ranges = [
     ('2020-01-01', '2020-05-01')
 ]
 
-query_0 = 'regex AND evil is:closed is:pr -author:app/dependabot -author:app/dependabot-preview -author:app/renovate -author:app/greenkeeper -author:greenkeeperio-bot created:>2023-05-01'
-query_n = 'regex AND evil is:closed is:pr -author:app/dependabot -author:app/dependabot-preview -author:app/renovate -author:app/greenkeeper -author:greenkeeperio-bot created:<2020-01-01'
+query_0 = 'regex AND redos is:closed is:pr -author:app/dependabot -author:app/dependabot-preview -author:app/renovate -author:app/greenkeeper -author:greenkeeperio-bot created:>2023-05-01'
+query_n = 'regex AND redos is:closed is:pr -author:app/dependabot -author:app/dependabot-preview -author:app/renovate -author:app/greenkeeper -author:greenkeeperio-bot created:<2020-01-01'
 
-base_query = 'regex AND evil is:closed is:pr -author:app/dependabot -author:app/dependabot-preview -author:app/renovate -author:app/greenkeeper -author:greenkeeperio-bot created:'
+base_query = 'regex AND redos is:closed is:pr -author:app/dependabot -author:app/dependabot-preview -author:app/renovate -author:app/greenkeeper -author:greenkeeperio-bot created:'
 
 queries.append(query_0)     # after 2023-05-01
 for start_date, end_date in date_ranges:    # separate into different time range
@@ -152,5 +153,5 @@ for query in queries:
 
 print("Total number of pull requests: ", cnt)
 print("Total number of pull requests with bot: ", cnt_with_bot)
-with open('../data/pull_requests_regex_evil.json', 'w') as f:
+with open('../data/pull_requests_regex_redos.json', 'w') as f:
     json.dump(pr_list, f)
