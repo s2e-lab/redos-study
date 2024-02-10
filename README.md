@@ -32,7 +32,7 @@ remove vulnerable regexes.
   - Evaluation: Contains the scripts used to evaluate the regexes and this results presented in the RQ1.
   - ReDoSAnalysis: Contains the scripts used to analyze the ReDoS patterns and the results presented in the RQ2.
   - RQ3_Analysis: Contains the scripts used to analyze the ReDoS in the real-world and the results presented in the RQ3.
-  - Data_Collection: Contains the scripts used to collect the data from GitHub and StackOverflow, used in RQ4.
+  - RQ4_Data_Collection: Contains the scripts used to collect the data from GitHub and StackOverflow, used in RQ4.
   - Other scripts used to generate the fine-grained data and plots presented in the paper.
 
 ## Usage
@@ -74,4 +74,4 @@ You will need an OpenAI API key for gpt35.py and have to create a **config.json*
 - Files with the name *[gG]ithub* or *stackoverflow|SO* are used to collect the data from GitHub and StackOverflow. 
 - *SO_collect.py* and *Github_collect_regex_redos.py* are used to analyze the data collected from StackOverflow and GitHub, respectively.
 - *Github_merge_script.py* and *SO_merge_script.py* are used to merge two types of data collected from GitHub and StackOverflow, respectively.
-= *SO_diff_check.py* and *Github_diff_check.py* are used to check if the Stack Overflow or Github JSON file contains any duplicate items.
+= *SO_diff_check.py* and *Github_diff_check.py* are used to check if the Stack Overflow or Github JSON file contains any duplicate items(contain `regex`, `evil` and `redos`).
