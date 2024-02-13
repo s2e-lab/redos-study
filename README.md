@@ -2,28 +2,27 @@
 This repository contains the source code of the paper "Understanding Regular Expression Denial of Service (ReDoS): Insights from LLM-Generated Regexes and Developer Forums", accepted at the  32nd International Conference on Program Comprehension (ICPC 2024).
 
 ## Abstract
-Regular expression Denial of Service (ReDoS) represents an algorithmic complexity attack that exploits the processing of regular
+Regular expression Denial of Service (ReDoS) represents an algo-
+rithmic complexity attack that exploits the processing of regular
 expressions (regexes) to produce a denial-of-service attack. This
-attack manifests when regex evaluation time scales polynomially
-or exponentially with input length, posing sporadic yet significant
-challenges for software developers. The advent of Large Language
-Models (LLMs) has revolutionized the generation of regexes from
-natural language prompts, but not without its risks. Prior works
-showed that LLMs can generate code with vulnerabilities and security smells. In this paper, we synthesized a vast collection of regex
-patterns from a comprehensive dataset, assessing their correct-
-ness and ReDoS vulnerability. We investigated the characteristics
-of these vulnerable regexes, categorizing them into equivalence
-classes to unravel their weaknesses. Our inquiry also extended to
-examining ReDoS patterns in actual software projects, aligning
-them with corresponding regex classes. LLM-generated regexes
-mainly have polynomial ReDoS vulnerability patterns, and it is
-consistent with the real-world data. Moreover, we analyzed de-
-veloper dialogues on GitHub and StackOverflow, constructing a
-taxonomy to investigate their experiences and perspectives on Re-
-DoS. In this study, we found that GPT-3.5 was the best LLM to
-generate regexes that are both correct and secure. We also found
-that developers’ main concern is related to mitigation strategies to
-remove vulnerable regexes.
+attack occurs when a regex’s evaluation time scales polynomially or
+exponentially with input length, posing significant challenges for
+software developers. The advent of Large Language Models (LLMs)
+has revolutionized the generation of regexes from natural language
+prompts, but not without its risks. Prior works showed that LLMs
+can generate code with vulnerabilities and security smells. In this paper, we examined the correctness and security of regexes generated
+by LLMs as well as the characteristics of LLM-generated vulner-
+able regexes. Our study also examined ReDoS patterns in actual
+software projects, aligning them with corresponding regex equiva-
+lence classes and algorithmic complexity. Moreover, we analyzed
+developer discussions on GitHub and StackOverflow, constructing
+a taxonomy to investigate their experiences and perspectives on
+ReDoS. In this study, we found that GPT-3.5 was the best LLM to
+generate regexes that are both correct and secure. We also observed
+that LLM-generated regexes mainly have polynomial ReDoS vulner-
+ability patterns and it is consistent with vulnerable regexes found
+in open-source projects. We also found that developers’ main discussions around insecure regexes are related to mitigation strategies
+to remove vulnerable regexes.
 
 ## Project Structure
 - Developers_Discussion_Data: Contains the data collected from GitHub and StackOverflow about ReDoS.
@@ -48,7 +47,7 @@ pip install accelerate
 ```
 
 ### Generation
-There are three Python files for three models: gpt35.py, Phi_RegexGen and T5_Regexgen.py. You can run them to generate the regexes.
+There are three Python files for three models: gpt35.py, Phi_RegexGen, and T5_Regexgen.py. You can run them to generate the regexes.
 
 
 
