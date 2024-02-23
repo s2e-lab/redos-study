@@ -1,5 +1,5 @@
 # ReDoS Comprehension from LLM and Developer Forums
-This repository contains the source code of the paper "Understanding Regular Expression Denial of Service (ReDoS): Insights from LLM-Generated Regexes and Developer Forums", accepted at the  32nd International Conference on Program Comprehension (ICPC 2024).
+This repository contains the source code of the paper *"Understanding Regular Expression Denial of Service (ReDoS): Insights from LLM-Generated Regexes and Developer Forums"*, accepted at the **32nd International Conference on Program Comprehension (ICPC 2024)**.
 
 ## Abstract
 Regular expression Denial of Service (ReDoS) represents an algo-
@@ -26,9 +26,9 @@ to remove vulnerable regexes.
 
 ## Project Structure
 - Developers_Discussion_Data: Contains the data collected from GitHub and StackOverflow about ReDoS.
-- scrips: Contains the scripts used to generate the data and the plots.
+- Scripts: Contains the scripts used to generate the data and the plots.
   - Generation: Contains the scripts used to generate the regexes from LLMs.
-  - Evaluation: Contains the scripts used to evaluate the regexes and this results presented in the RQ1.
+  - Evaluation: Contains the scripts used to evaluate the regexes and the results presented in the RQ1.
   - ReDoSAnalysis: Contains the scripts used to analyze the ReDoS patterns and the results presented in the RQ2.
   - RQ3_Analysis: Contains the scripts used to analyze the ReDoS in the real-world and the results presented in the RQ3.
   - RQ4_Data_Collection: Contains the scripts used to collect the data from GitHub and StackOverflow, used in RQ4.
@@ -74,3 +74,16 @@ You will need an OpenAI API key for gpt35.py and have to create a **config.json*
 - *SO_collect.py* and *Github_collect_regex_redos.py* are used to analyze the data collected from StackOverflow and GitHub, respectively.
 - *Github_merge_script.py* and *SO_merge_script.py* are used to merge two types of data collected from GitHub and StackOverflow, respectively.
 = *SO_diff_check.py* and *Github_diff_check.py* are used to check if the Stack Overflow or Github JSON file contains any duplicate items(contain `regex`, `evil` and `redos`).
+
+
+## Citation
+If you use this code, please cite the following paper:
+```
+@inproceedings{siddiq2024understanding,
+  author={Siddiq, Mohammed Latif and Zhang, Jiahao and Santos, Joanna C. S.},
+  booktitle={32nd IEEE/ACM International Conference on Program Comprehension (ICPC 2024)}, 
+  title={Understanding Regular Expression Denial of Service (ReDoS): Insights from LLM-Generated Regexes and Developer Forums}, 
+  year={2024},
+  doi={10.1145/3643916.3644424}
+}
+```
